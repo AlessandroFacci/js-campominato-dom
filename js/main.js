@@ -1,10 +1,12 @@
 const button = document.getElementById("generate");
 const grid = document.getElementById("grid");
-
-generateGrid();
+let bombs = [];
+//generateGrid();
 
 button.addEventListener("click", function () {
   generateGrid();
+  bombs = generateBombs();
+  console.log(bombs);
 });
 
 function generateGrid() {
@@ -19,15 +21,32 @@ function generateGrid() {
 function generateCell(cellText) {
   const cell = document.createElement("div");
   cell.classList.add("cell");
-  //cell.innerHTML = cellText;
+  cell.innerHTML = cellText;
 
   cell.addEventListener("click", function () {
-    cell.classList.add("azure");
-    console.log(cellText);
+    if (bombs.includes(cellText)) {
+      alert("bomba");
+    } else {
+      cell.classList.add("azure");
+      console.log(cellText);
+    }
   });
 
   return cell;
 }
 
-const randomNumber = Math.floor(Math.random() * 16) + 1;
-console.log(randomNumber);
+function generateBombs() {
+  const bombs = [];
+  const max = 100;
+  const min = 1;
+
+  while (bombs.length < 16) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    if (!bombs.includes(randomNumber)) {
+      bombs.push(randomNumber);
+    }
+  }
+
+  console.log(bombs);
+  return bombs;
+}
