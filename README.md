@@ -19,3 +19,14 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
   Di cosa ho bisogno per generare i numeri?
   Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
   Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+### Procedimento:
+
+- genero 16 numeri casuali
+- se clicco
+  - su una bomba
+    - la cella la coloro di rosso
+    - la partita termina
+  - altrimenti
+    - la cella la coloro di azzurro
+    - l'utente può continuare a cliccare
