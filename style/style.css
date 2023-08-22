@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#generate {
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  max-width: 130px;
+}
+
+#grid {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.cell {
+  width: calc(100% / 10);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.azure {
+  background-color: azure;
+}
