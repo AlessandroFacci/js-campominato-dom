@@ -25,7 +25,8 @@ function generateCell(cellText) {
 
   cell.addEventListener("click", function () {
     if (bombs.includes(cellText)) {
-      alert("bomba");
+      cell.classList.add("red");
+      alert("Bomba");
     } else {
       cell.classList.add("azure");
       console.log(cellText);
